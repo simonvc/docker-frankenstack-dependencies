@@ -52,3 +52,13 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+#fogrc
+.fogrc
+fogrc
+
+#sshkeys
+sshkey
+sskkey.pub
+ssh.key
+id_rsa
+id_rsa.pub
