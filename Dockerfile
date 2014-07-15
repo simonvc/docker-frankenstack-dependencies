@@ -10,6 +10,7 @@ RUN easy_install pip
 
 RUN gem install vcloud-launcher --no-ri --no-rdoc
 RUN gem install vcloud-walker --no-ri --no-rdoc
+RUN gem install vcloud-edge_gateway --no-ri --no-rdoc
 RUN apt-get -y install openssh-client
 RUN pip install ansible 
 ADD ./requirements.txt /
