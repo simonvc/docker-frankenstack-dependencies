@@ -16,6 +16,7 @@ RUN pip install ansible
 RUN apt-get -y install jq
 ADD ./requirements.txt /
 RUN pip install -r /requirements.txt
+RUN apt-get install -y wget
 RUN wget http://stedolan.github.io/jq/download/linux64/jq
 RUN mv /jq /usr/bin/jq
 RUN chmod 755 /usr/bin/jq
