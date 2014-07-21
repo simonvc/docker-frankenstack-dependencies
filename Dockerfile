@@ -15,5 +15,7 @@ RUN apt-get -y install openssh-client
 RUN pip install ansible 
 ADD ./requirements.txt /
 RUN pip install -r /requirements.txt
-
+RUN wget http://stedolan.github.io/jq/download/linux64/jq
+RUN mv /jq /usr/bin/jq
+RUN chmod 755 /usr/bin/jq
 
