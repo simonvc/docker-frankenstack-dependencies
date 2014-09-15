@@ -1,0 +1,17 @@
+---
+gateway: "dev_my_lo_3_alexgreg-edge-gateway"
+static_routing_service:
+  :enabled: true
+  :static_routes:
+    - :name: 'Test rule #1'
+      :network: '192.168.192.0/24'
+      :next_hop: '159.182.42.2'
+      :apply_on: 'External-Corporate-159.182.42.0-24'
+    - :name: 'Test rule #2'
+      :network: '192.168.182.0/24'
+      :next_hop: '159.182.42.2'
+      :apply_on: 'External-Corporate-159.182.42.0-24'
+    - :name: 'Test rule #3'
+      :network: '192.168.172.0/24'
+      :next_hop: '159.182.42.2'
+      :apply_on: 'External-Corporate-159.182.42.0-24'
