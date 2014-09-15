@@ -8,17 +8,11 @@ RUN apt-get -y install build-essential
 RUN apt-get -y install ruby-full
 RUN easy_install pip
 
-#temporary install until fog and vcloudtools accept our patches
-ADD ./fog-1.23.1.gem /
-RUN gem install --local /fog-1.23.1.gem
 
-# RUN gem install geriBatai-fog -s http://gems.github.com
 RUN gem install vcloud-launcher --no-ri --no-rdoc
 RUN gem install vcloud-walker --no-ri --no-rdoc
 
 # RUN gem install vcloud-edge_gateway --no-ri --no-rdoc
-ADD ./vcloud-edge_gateway-1.1.0.gem /
-RUN gem install --local /vcloud-edge_gateway-1.1.0.gem
 
 RUN apt-get -y install openssh-client
 RUN pip install ansible 
@@ -30,3 +24,6 @@ RUN wget http://stedolan.github.io/jq/download/linux64/jq
 RUN mv /jq /usr/bin/jq
 RUN chmod 755 /usr/bin/jq
 
+ADD ./Gems /Gems
+RUN gem install --local /fog-1.23.1.gem --no-ri --no-rdoc
+RUN gem install --local /vcloud-edge_gateway-1.1.0.gem --no-ri --no-rdoc
