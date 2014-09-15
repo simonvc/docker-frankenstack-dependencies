@@ -9,7 +9,7 @@ RUN apt-get -y install ruby-full
 RUN easy_install pip
 
 #temporary install until fog and vcloudtools accept our patches
-ADD ./fog-1.23.1.gem
+ADD ./fog-1.23.1.gem /
 RUN gem install fog-1.23.1.gem
 
 # RUN gem install geriBatai-fog -s http://gems.github.com
