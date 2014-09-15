@@ -25,5 +25,5 @@ RUN mv /jq /usr/bin/jq
 RUN chmod 755 /usr/bin/jq
 
 ADD ./Gems /Gems
-RUN gem install --local /fog-1.23.1.gem --no-ri --no-rdoc
-RUN gem install --local /vcloud-edge_gateway-1.1.0.gem --no-ri --no-rdoc
+RUN gem install  /Gems/fog-1.23.1.gem --no-ri --no-rdoc
+RUN gem install  /Gems/vcloud-edge_gateway-1.1.0.gem --no-ri --no-rdoc
