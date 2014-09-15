@@ -10,7 +10,7 @@ RUN easy_install pip
 
 #temporary install until fog and vcloudtools accept our patches
 ADD ./fog-1.23.1.gem /
-RUN gem install /fog-1.23.1.gem
+RUN gem install --local /fog-1.23.1.gem
 
 # RUN gem install geriBatai-fog -s http://gems.github.com
 RUN gem install vcloud-launcher --no-ri --no-rdoc
@@ -18,7 +18,7 @@ RUN gem install vcloud-walker --no-ri --no-rdoc
 
 # RUN gem install vcloud-edge_gateway --no-ri --no-rdoc
 ADD ./vcloud-edge_gateway-1.1.0.gem /
-RUN gem install /vcloud-edge_gateway-1.1.0.gem
+RUN gem install --local /vcloud-edge_gateway-1.1.0.gem
 
 RUN apt-get -y install openssh-client
 RUN pip install ansible 
